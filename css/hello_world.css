@@ -1,0 +1,65 @@
+img:hover {
+    content: url('../img/tesla-x.jpg');
+}
+td {
+    font-size: 4em;
+    font-stretch: semi-expanded;
+    font-family: "DIN Alternate";
+}
+
+h1 {
+    color: #FFF;
+    text-decoration: underline;
+    text-align: center;
+}
+h2 {
+    color: #FF11AA;
+}
+
+h3 {
+    color: limegreen;
+}
+
+}
+
+ul {
+    list-style-type: upper-latin;
+    color: aquamarine;
+}
+
+ol {
+    list-style-type: circle;
+    color: lime;
+}
+
+.table {
+    background: green;
+    border: double red;
+    font-size: large;
+    align-items:center;
+    margin-left: 400px;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: #fefe00;
+    text-decoration: blink;
+
+}
+a:active {
+    font-weight: bold;
+}
+
+body {
+    background-image:
+        linear-gradient(45deg, blue, red);
+        linear-gradient(to left top, blue, red);
+        linear-gradient(0deg, blue, green 40%, red);
+}

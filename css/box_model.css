@@ -1,0 +1,88 @@
+.box {
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: black;
+    border: solid 1px;
+    border-color: black;
+    width:50px;
+    height: 50px;
+    padding:10px;
+    margin: 25px;
+    background-image: url();
+    float: left;
+    text-shadow: 1px 1px black;
+
+}
+
+.box:nth-child(3), .box:nth-child(5) {
+    clear: left;
+}
+
+.ribbon {
+    position: relative;
+    top: -85px;
+    right:-50px;
+}
+
+#ribbon {
+    position: fixed;
+    top:0px;
+    left:85%;
+
+
+}
+
+#red_box {
+    background-color: red;
+}
+
+#orange_box {
+    background-color: orange;
+}
+
+#yellow_box {
+    background-color: yellow;
+    text-shadow: black;
+
+}
+
+#green_box {
+    background-color: green;
+}
+
+#blue_box{
+    background-color: blue;
+}
+
+#violet_box {
+    background-color: violet;
+
+}
+
+a:hover {
+    padding-bottom: 0px;
+    background: green;
+}
+
+body {
+
+
+    background-image:
+            -moz-linear-gradient(45deg, #000 25%, transparent 25%),
+            -moz-linear-gradient(-45deg, #000 25%, transparent 25%),
+            -moz-linear-gradient(45deg, transparent 75%, #000 75%),
+            -moz-linear-gradient(-45deg, transparent 75%, #000 75%);
+
+
+    background-image:
+            -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #000), color-stop(.25, transparent)),
+            -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #000), color-stop(.25, transparent)),
+            -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #000)),
+            -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #000));
+
+    -moz-background-size:100px 100px;
+    background-size:100px 100px;
+    -webkit-background-size:100px 101px; /* override value for shitty webkit */
+
+    background-position:0 0, 50px 0, 50px -50px, 0px 50px;
+}

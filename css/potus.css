@@ -1,0 +1,105 @@
+
+
+body {
+    font-family: "Comic Sans MS";
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+li h1 {
+    display: inline;
+    font-size: smaller;
+}
+
+#form1 {
+    color: #FFF;
+    font-weight: bold;
+    border: 3px red solid;
+    background-image: url("../img/camacho.png");
+    padding-left: 25%;
+    padding-bottom: 3%;
+    height: 20%;
+}
+
+/* Everything is in this div */
+ #main_div {
+     margin: 10px;
+ }
+
+/* This is applied to "Umm, tasty burger */
+#main {
+    float: left;
+    width:65%;
+}
+
+/* This is applied to "I can do that" */
+ #root {
+     padding-left: 2%;
+     width:25%;
+     float: right;
+ }
+
+ /* This is the bottom footer */
+ #quote {
+     color: #FFFFFF;
+     font-size: smaller;
+     text-align: center;
+     border: 3px red solid;
+     background-image: url("../img/camacho.png");
+     opacity: 0.8;
+     margin-top: 10%;
+     float: left;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     width:100%;
+     clear:both
+ }
+.menu {
+    padding-right: 3%;
+}
+
+a:hover {
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        background-color: lightgreen;
+        font-size: x-small;
+    }
+    input, select, button {
+        display: block;
+    }
+    li h1 {
+        font-size: 2em;
+    }
+    #main {
+        width: 100%;
+    }
+    #root {
+        width:100%
+    }
+    #form1 h3 {
+        font-size: smaller;
+    }
+    input, select{
+        width: 98%
+    }
+    #form1 {
+        padding:0px;
+
+    }
+}
+
