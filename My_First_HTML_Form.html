@@ -3,74 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <title>My First HTML Form</title>
-    <link >
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/lloyd_content.css">
+    <link rel="canonical" href="http://themes.getbootstrap.com/">
+    <link href="//cdn.shopify.com/s/files/1/0691/5403/t/128/assets/style.scss.css?16696099757203580349" rel="stylesheet" type="text/css" media="all">
+
 </head>
-<body>
-    <form method="POST" action="http://requestb.in/18x2xne1">
-        <h2>User Login</h2>
-        <p>
-            <label for="username">Username</label>
-            <input id="username" name="username" type="text">
-        </p>
-        <p>
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password"
-                   required autofocus placeholder="please enter your password NOW!!!!">
-        </p>
-        <p>
-            <input type="submit">
-        </p>
-    </form>
-    <form method="POST" action="http://requestb.in/18x2xne1">
-        <h2>Compose An Email</h2>
-        <p>
-            <label for="to">To: </label>
-            <input id="to" name="to" type="text">
-        </p>
-        <p>
-            <label for="from">From: </label>
-            <input id="from" name="from" type="text">
-        </p>
-        <p>
-            <label for="email_body">Email Body</label>
-        </p>
-        <p>
-            <textarea id="email_body" name="email_body" rows="20" cols="40">Body</textarea>
-        </p>
-        <p>
-            <label for="date">Date and Time</label>
-            <input id="date" type="datetime-local">
-        </p>
-        <p>
-            <input type="checkbox" id="save_email" name="save_email" value="yes" checked>
-            <label for="save_email">Save a copy to your sent folder?</label>
-        </p>
-        <input type="submit">
-    </form>
-    <form>
-        <h2>Multiple Choice Test</h2>
-        <p>
-            <label for="sport">What sports do you play?
-                <select id="sport" name="sport[]" multiple>
-                    <option value="soccer">Soccer</option>
-                    <option value="football">Football</option>
-                    <option value="basketball" selected>Basketball</option>
-                </select>d
-            </label>
+<body id="bootstrap-themes" class="bs-doc-home swag-line template-index">
+    <main>
+        <div class="container">
+            <form method="POST" action="http://requestb.in/18x2xne1">
+                <h2>User Login</h2>
+                <p>
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text">
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password"
+                           required autofocus placeholder="please enter your password NOW!!!!">
+                </p>
+                <p>
+                    <input type="submit">
+                </p>
+            </form>
+            <form method="POST" action="http://requestb.in/18x2xne1">
+                <h2>Compose An Email</h2>
+                <p>
+                    <label for="to">To: </label>
+                    <input id="to" name="to" type="text">
+                </p>
+                <p>
+                    <label for="from">From: </label>
+                    <input id="from" name="from" type="text">
+                </p>
+                <p>
+                    <label for="email_body">Email Body</label>
+                </p>
+                <p>
+                    <textarea id="email_body" name="email_body" rows="20" cols="40">Body</textarea>
+                </p>
+                <p>
+                    <label for="date">Date and Time</label>
+                    <input id="date" type="datetime-local">
+                </p>
+                <p>
+                    <input type="checkbox" id="save_email" name="save_email" value="yes" checked>
+                    <label for="save_email">Save a copy to your sent folder?</label>
+                </p>
+                <input type="submit">
+            </form>
+            <form>
+                <h2>Multiple Choice Test</h2>
+                <p>
+                    <label for="sport">What sports do you play?
+                        <select id="sport" name="sport[]" multiple>
+                            <option value="soccer">Soccer</option>
+                            <option value="football">Football</option>
+                            <option value="basketball" selected>Basketball</option>
+                        </select>d
+                    </label>
 
-    </form>
-    <form action="">
-        <h2>Select Testing</h2>
-        <p>
-            <lable for="cake">Do you like cake?
-                <select id="cake" name="cake[]" multiple>
-                    <option value="1" selected>Yes</option>
-                    <option value="0">No</option>
-                </select>
-            </lable>
+            </form>
+            <form action="">
+                <h2>Select Testing</h2>
+                <p>
+                    <lable for="cake">Do you like cake?
+                        <select id="cake" name="cake[]" multiple>
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </lable>
 
-        </p>
+                </p>
 
-    </form>
+            </form>
+        </div>
+    </main>
+    <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('#back-to-top').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+
+            $('#back-to-top').tooltip('show');
+
+        });
+    </script>
 </body>
 </html>
