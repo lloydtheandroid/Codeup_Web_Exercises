@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Maker</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/lloyd_content.css">
+    <link rel="canonical" href="http://themes.getbootstrap.com/">
+    <link href="//cdn.shopify.com/s/files/1/0691/5403/t/128/assets/style.scss.css?16696099757203580349" rel="stylesheet" type="text/css" media="all">
+    <style>
+        .panel-heading {
+            background-image: url(img/pizza-background.jpg);
+        }
+    </style>
+</head>
+<body>
+<nav></nav>
+
+<main class="container">
+    <h1>Order Some Pizza</h1>
+    <div class="row row-padded row-bordered row-centered">
+        <div class="col-sm-12">
+            <div class="row">
+                <!-- Start of First panel -->
+                <div class="col-md-12 m-b-lg">
+                    <div class="panel panel-default panel-profile m-b-0">
+                        <div class="panel-heading img-responsive"></div>
+                        <div class="panel-body">
+                            <img class="panel-profile-img" src="img/mike-pizza.jpg">
+                            <h5 class="panel-title">Pepperoni Pizza</h5>
+                            <div class="col-lg-4 col-md-6 col-xs-12">
+                                Column 1
+                                <div class="container">
+
+                                <form>
+                                    <label class="radio">
+                                        <input type="radio" name="deliver" id="carryout" value="carryout" checked>Carryout
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="deliver" id="delivery" value="delivery">Delivery
+                                    </label>
+                                </form>
+                                <div id="show-me" style="display:none">
+                                    <div class="container">
+                                        <div class="row">
+                                            <form class="form-horizontal">
+                                                <fieldset>
+                                                    <!-- Address form -->
+
+                                                    <h2>Address</h2>
+
+                                                    <!-- full-name input-->
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <input id="full-name" name="full-name" type="text" placeholder="full name"
+                                                                   class="input-xlarge">
+                                                            <p class="help-block"></p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- address-line1 input-->
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <input id="address-line1" name="address-line1" type="text" placeholder="address line 1"
+                                                                   class="input-xlarge">
+                                                            <p class="help-block">Street address, P.O. box, company name, c/o</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- address-line2 input-->
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <input id="address-line2" name="address-line2" type="text" placeholder="address line 2"
+                                                                   class="input-xlarge">
+                                                            <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- city input-->
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <input id="city" name="city" type="text" placeholder="city" class="input-xlarge">
+                                                            <p class="help-block"></p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- region input-->
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <input id="region" name="region" type="text" placeholder="state / province / region"
+                                                                   class="input-xlarge">
+                                                            <p class="help-block"></p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- postal-code input-->
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code"
+                                                                   class="input-xlarge">
+                                                            <p class="help-block"></p>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-xs-12">
+                                Pizza Toppings
+
+                                <div><input type="radio" name="crust" value="5">Thin Crust</div>
+                                <div><input type="radio" name="crust" value="6">Regular</div>
+                                <div><input type="radio" name="crust" value="8">Cheesy Crust</div>
+                                <div><input type="radio" name="crust" value="6">Deep Dish</div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="1" name="pepperoni" id="pepporoni">
+                                        Pepperoni
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="mushrooms" id="mushrooms">
+                                        Mushrooms
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="onions" id="onions">
+                                        Onions
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="sausage" id="sausage">
+                                        Sausage
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="bacon" id="bacon">
+                                        Bacon
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="x-cheese" id="x-cheese">
+                                        Extra Cheese
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="olives" id="olives">
+                                        Black Olives
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="gr-peppers" id="gr-peppers">
+                                        Green Peppers
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="pineapple" id="pineapple">
+                                        Pineapple
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="spinach" id="spinach">
+                                        Spinach
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="1" name="anchovies" id="anchovies">
+                                        Extra Anchovies
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-xs-12">
+                                Price
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="price">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" name="price" id="price" placeholder="Amount">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Transfer cash</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End  of First panel -->
+
+            <!-- Sroll to top Button-->
+            <div class="container">
+                <div class="row">
+                    <a id="back-to-top" href="#top" class="btn btn-primary btn-lg back-to-top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer></footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        $('input[type="radio"]').click(function() {
+            if($(this).attr('id') == 'delivery') {
+                $('#show-me').show();
+            }
+
+            else {
+                $('#show-me').hide();
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        // cache the inputs and bind the events
+        var $inputs = $('input[type="checkbox"]')
+        $inputs.on('change', function () {
+            var sum = 0;
+            $inputs.each(function() {
+                // iterate and add it to sum only if checked
+                if(this.checked)
+                    sum += parseInt(this.value);
+            });
+            $("#price").val(sum);
+        });
+    });
+</script>
+</body>
+</html>
