@@ -3,236 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Maker</title>
-
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/lloyd_content.css">
-    <link rel="canonical" href="http://themes.getbootstrap.com/">
-    <link href="//cdn.shopify.com/s/files/1/0691/5403/t/128/assets/style.scss.css?16696099757203580349" rel="stylesheet" type="text/css" media="all">
     <style>
-        .panel-heading {
-            background-image: url(img/pizza-background.jpg);
-        }
+       /* insert some cool style here!
     </style>
 </head>
 <body>
     <nav>
-        <h2>THIS IS THE NAV BAR</h2>
+        This is the NAV Bar
     </nav>
 
-    <main class="container">
-        <form method="post" action="http://requestb.in/rplf1prp">
-            <h1>Order Some Pizza</h1>
-            <!-- Start of First panel -->
-            <div class="col-md-12 m-b-lg">
-                <div class="panel panel-default panel-profile m-b-0">
-                    <div class="panel-heading img-responsive"></div>
-                    <section class="panel-body">
-                        <img class="panel-profile-img" src="img/mike-pizza.jpg">
-                        <h5 class="panel-title">Pepperoni Pizza</h5>
-                        <div class="col-md-4">
-                            <h2>Is this order for delivery or carryout?</h2>
-                            <section>
-                                 <!--Delivery or carryout???-->
-                                <div class="col-md-12 col-xs-6">
-                                    <label class="radio">
-                                        <input type="radio" name="deliver" id="carryout" value="carryout"
-                                               checked>Carryout
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="deliver" id="delivery" value="delivery">Delivery
-                                    </label>
-                                </div>
-                                <div class="col-md-12 col-xs-6">
-                                    <div id="show-address" style="display:none">
-                                        <div class="container">
-                                            <div class="row">
-                                                <fieldset>
-                                                    <!-- Address form for delivery-->
-                                                    <h2>Address</h2>
-                                                    <textarea placeholder="Street city state">
-                                                    </textarea>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="col-md-8">
-                            <section class="col-xs-4">
-                                <div>
-                                    <fieldset>
-                                        <legend>Pizza Size</legend>
-                                        <p>
-                                            <input type="radio" name="size" id="size_1" value="small">
-                                            <label for="size_1">Small</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio" name="size" id="size_2" value="medium">
-                                            <label for="size_2">Medium</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio" name="size" id="size_3" value="large">
-                                            <label for="size_3">Large</label>
-                                        </p>
-                                        <h3>Toppings</h3>
-                                        <label>
-                                            <input type="checkbox" value="1" name="pepperoni" id="pepporoni">
-                                            Pepperoni
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="mushrooms" id="mushrooms">
-                                            Mushrooms
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="onions" id="onions">
-                                            Onions
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="sausage" id="sausage">
-                                            Sausage
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="bacon" id="bacon">
-                                            Bacon
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="x-cheese" id="x-cheese">
-                                            Extra Cheese
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="olives" id="olives">
-                                            Black Olives
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="gr-peppers" id="gr-peppers">
-                                            Green Peppers
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="pineapple" id="pineapple">
-                                            Pineapple
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="spinach" id="spinach">
-                                            Spinach
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" value="1" name="anchovies" id="anchovies">
-                                            Extra Anchovies
-                                        </label>
-                                    </fieldset>
-                                </div>
-                            </section>
-                            <section class="col-md-4">
-                            Price
-                                <div>
-                                    <h6>How will you be paying?</h6>
-                                    <label class="radio">
-                                        <input type="radio" name="payment" id="cash" value="carryout"
-                                               checked>Cash
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="payment" id="credit" value="credit">Credit
-                                    </label>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="price">Amount (in dollars)</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">$</div>
-                                            <input type="text" class="form-control" name="price" id="price" placeholder="Amount">
-                                            <div class="input-group-addon">.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- PAYMENT FORM -->
-                                <div id="show-card" style="display:none">
-
-                                    <h1>Payment form</h1>
-                                    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-
-                                    <section>
-                                        <h2>Contact information</h2>
-
-                                        <fieldset>
-                                            <legend>Title</legend>
-                                            <ul>
-                                                <li>
-                                                    <label for="title_1">
-                                                        <input type="radio" id="title_1" name="title" value="M." />
-                                                        Mister
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label for="title_2">
-                                                        <input type="radio" id="title_2" name="title" value="Ms." />
-                                                        Miss
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </fieldset>
-
-                                        <p>
-                                            <label for="name">
-                                                <span>Name: </span>
-                                                <input type="text" id="name" name="username" required />
-                                                <strong><abbr title="required">*</abbr></strong>
-                                            </label>
-                                        </p>
-
-                                        <p>
-                                            <label for="mail">
-                                                <span>E-mail: </span>
-                                                <input type="email" id="mail" name="usermail" required />
-                                                <strong><abbr title="required">*</abbr></strong>
-                                            </label>
-                                        </p>
-                                    </section>
-
-                                    <section>
-                                        <h2>Payment information</h2>
-
-                                        <p>
-                                            <label for="card">
-                                                <span>Card type:</span>
-                                                <select id="card" name="usercard">
-                                                    <option value="visa">Visa</option>
-                                                    <option value="mc">Mastercard</option>
-                                                    <option value="amex">American Express</option>
-                                                </select>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label for="number">
-                                                <span>Card number:</span>
-                                                <input type="text" id="number" name="cardnumber" required />
-                                                <strong><abbr title="required">*</abbr></strong>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label for="date">
-                                                <span>Expiration date:</span>
-                                                <input type="text" id="date" name="expiration" required />
-                                                <strong><abbr title="required">*</abbr></strong>
-                                                <em>formated as mm/yy</em>
-                                            </label>
-                                        </p>
-                                    </section>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Check Out</button>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <!-- End  of First panel -->
+    <main>
+        <form>
+            <!-- Creating a New Form from scratch -->
         </form>
     </main>
-         <!--Sroll to top Button-->
-        <div class="container">
-            <div class="row">
-                <a id="back-to-top" href="#top" class="btn btn-primary btn-lg back-to-top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
-            </div>
-        </div>
 
     <footer>
         <h2>THIS IS THE FOOTER</h2>
@@ -241,46 +26,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('input[type="radio"]').click(function() {
-                if($(this).attr('id') == 'delivery') {
-                    $('#show-address').show();
-                }
 
-                else {
-                    $('#show-address').hide();
-                }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('input[type="radio"]').click(function() {
-                if($(this).attr('id') == 'credit') {
-                    $('#show-card').show();
-                }
-
-                else {
-                    $('#show-card').hide();
-                }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            // cache the inputs and bind the events
-            var $inputs = $('input[type="checkbox"]')
-            $inputs.on('change', function () {
-                var sum = 0;
-                $inputs.each(function() {
-                    // iterate and add it to sum only if checked
-                    if(this.checked)
-                        sum += parseInt(this.value);
-                });
-                $("#price").val(sum);
-            });
-        });
-    </script>
 </body>
 </html>
