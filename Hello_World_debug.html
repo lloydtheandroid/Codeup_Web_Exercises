@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--1. Adding Indents for all Tags-->
+    <!--2. Adding Meta tag-->
+    <meta charset="UTF-8">
+    <!--3. Adding CSS Styling, moved all styling from html to CSS-->
+    <style>
+        /*CSS Styling goes here */
+        body {
+            margin: 0;
+            padding: 0 15px 0 15px;
+            font-family: "Trebuchet MS", Verdana;
+        }
+        .col-md-1 {
+            width: 8%;
+            padding: 0;
+            border: 0;
+            float: left;
+        }
+        .col-md-3 {
+            width: 20%;
+            padding: 0;
+            border: 0;
+            float: left;
+        }
+        .col-md-8 {
+            width: 75%;
+            padding: 10px;
+            border: 0;
+            float: left;
+        }
+
+        .col-md-12 {
+            width: 100%;
+            padding: 0;
+            border: 0;
+            float: left;
+        }
+
+        .container {
+            width: 100%;
+            padding: 10px;
+            border: 0px;
+            height: 100%;
+            float: left;
+        }
+        .top {
+            vertical-align: top;
+        }
+
+        .bgGrey {
+            background-color: #999f8e;
+        }
+        .bgLGrey {
+            background-color: #d2d8c7;
+        }
+        .text-center {
+            text-align: center;
+            display: inline;
+        }
+        .img-responsive {
+            display: inline;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <title>New Style Layout</title>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="col-md-3 top bgGrey">
+                <a href="#">Menu link</a><br>
+                <a href="#">Menu link</a><br>
+                <a href="#">Menu link</a><br>
+                <a href="#">Menu link</a><br>
+                <a href="#">Menu link</a>
+            </div>
+            <div class="col-md-8 top bgLGrey">
+                <div class="col-md-1"><img src="img/codeup.png" class="img-responsive"></div>
+                <div class="col-md-3"><h1 class="text-center">Codeup</h1></div>
+                <div class="col-md-12">
+
+                <p>This is a basic two-column web page layout. The left column or the <i>menu column</i>
+                is a narrow band of space (usually between 15-25% of the page width) and is reserved for
+                a menu of hyperlinks leading to other pages on your website. The table used to create this
+                layout employs a single table row containing two table cells.</p>
+
+
+                <p>The right column or the <i>content column</i> takes up the lion's share of the web page
+                width and contains the actual content of each particular page. In a basic two column layout
+                like this, it is common to place the website logo at the top of the content column on each page.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html><!-- Added close tag to HTML-->
