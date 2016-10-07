@@ -2,12 +2,14 @@
  * Created by lloyd on 10/6/16.
  */
 var luckyNumber = Math.floor(Math.random()* 6)
-var discount = luckyNumber;
 var receipt = 60;
 var total = "";
 
 
-switch (discount) {
+switch (luckyNumber) {
+    case 0:
+        total = receipt;
+        break;
     case 1:
         total = receipt * .90;
         break;
@@ -21,11 +23,11 @@ switch (discount) {
         total = "free";
         break;
 }
-console.log("Your order is: " + total);
+console.log("Your luck number is " + luckyNumber + " Your order is: " + total);
 
 
-var month = "";
-var number = 1;
+var number =  Math.floor(Math.random()* 12) + 1;
+var month;
     switch (number){
         case 1:
            month = "January";
@@ -34,34 +36,35 @@ var number = 1;
             month = "February";
             break;
         case 3:
-           month = "January";
+           month = "March";
             break;
         case 4:
-            month = "February";
+            month = "April";
             break;
         case 5:
-           month = "January";
+           month = "May";
             break;
         case 6:
-            month = "February";
+            month = "June";
             break;
         case 7:
-           month = "January";
+           month = "July";
             break;
         case 8:
-            month = "February";
+            month = "August";
             break;
         case 9:
-           month = "January";
+           month = "September";
             break;
         case 10:
-            month = "February";
+            month = "October";
             break;
         case 11:
-           month = "January";
+           month = "November";
             break;
         case 12:
-            month = "February";
+            month = "December";
             break;
     }
-console.log(month);
+console.log("Your number is " + number + " your month is " +  month);
+
