@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Loop JS</title>
+</head>
+<body>
+    <script>
+        for (var i = 1; i <= 10; i++) {
+            var n = i.toString();
+            if (i == 10) {
+              console.log("0".repeat(i));
+          } else {
+              console.log(n.repeat(i));
+          }
+        }
+
+        var random = Math.floor(Math.random()* 10) + 1;
+        for (var i = 1; i <= 10; i++) {
+        var sum = i * random;
+        console.log(random + "x" + i + "=" + sum);
+        }
+
+
+        for (var num = 1; num <= 10; num++){
+            var r = Math.floor(Math.random()* 180) + 20;
+            if (r % 2 == 0) {
+                console.log("Your random number " + r + " is even");
+            }else {
+            console.log("your random number " + r + " is odd");
+            }
+        }
+
+        for (var j = 100;j > 0; j -= 5) {
+            console.log(j)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 /**
  * Created by lloyd on 10/6/16.
  */
-var luckyNumber = Math.floor(Math.random()* 6)
+var luckyNumber = Math.floor(Math.random()* 6);
 var receipt = 60;
 var total = "";
 
