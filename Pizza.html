@@ -13,7 +13,15 @@
 </head>
 <body>
     <nav class="navbar container">
-        <h6>This is the NAV Bar</h6>
+        <a class="navbar-brand" href="#">SanCHO's</a>
+        <ul class="nav navbar-nav">
+            <li id=""><a href="#">View All</a></li>
+            <li><a href="#"> Build Your Own Pizza</a></li>
+            <li><a href="#/section/Food/category/Pizza/">Specialty Pizzas</a></li>
+            <li><a href="#/section/Food/category/Wings/">Chicken</a></li>
+            <li><a href="#/section/Food/category/Sandwich/">Sandwiches</a></li>
+            <li><a href="#/section/Food/category/Pasta/">Pasta</a></li>
+        </ul>
     </nav>
 
     <main class="container">
@@ -22,8 +30,8 @@
         <p class="lead">The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</p>
         <form>
             <!-- Creating a New Form from scratch -->
-            <h1>Pizza ordering form</h1>
-            <section class="row">
+            <h1>Sancho's Pizza</h1>
+            <section class="row panel panel-default">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <h4>Column 1</h4>
                     <p class="text-left">Left aligned text.</p>
@@ -44,47 +52,64 @@
                     <abbr title="attribute">attr</abbr>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <h4>Column 4</h4>
-                    <table class="table table-hover">
-                        <tr>
-                            <th>
-                                row 1 column 1 header
-                            </th>
-                            <th>
-                                row 1 column 2 header
-                            </th>
-                            <th>
-                                row 1 column 3 header
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                row 2 column 1
-                            </td>
-                            <td>
-                            row 2 column 2
-                            </td>
-                            <td>
-                                row 2 column 3
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                row 3 column 1
-                            </td>
-                            <td>
-                                row 3 column 2
-                            </td>
-                            <td>
-                                row 3 column 3
-                            </td>
-                        </tr>
-                    </table>
+                    <h4>Sign In</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Sign In</button>
+                        <p><a href="#/resetPW">Forgot Password?</a></p>
+                        <p><a href="#/newUser">New User</a></p>
+
+                    </form>
                 </div>
             </section>
             <section class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <h4>Column 1</h4>
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Popular Items</td>
+                        </tr>
+                        <tr>
+                            <td href="#">Coupons</td>
+                        </tr>
+                        <tr>
+                            <td>Build your own Pizza</td>
+                        </tr>
+                        <tr>
+                            <td>Specialty Pizzas</td>
+                        </tr>
+                        <tr>
+                            <td>Pasta</td>
+                        </tr>
+                        <tr>
+                            <td>Oven Baked Sandwiches</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Sides</td>
+                        </tr>
+                        <tr>
+                            <td>Drinks</td>
+                        </tr>
+                        <tr>
+                            <td>Dessert</td>
+                        </tr>
+
+                    </table>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <h4>Column 2</h4>
