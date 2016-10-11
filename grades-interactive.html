@@ -8,8 +8,18 @@
     <script src="js/grades.js"></script>
     <script>
         (function () {
-            "use strict"
+            "use strict";
 
+            //declare a global variable
+            var globalVar = "Look, I'm Global!";
+
+            // call the say hello function
+            sayHello();
+
+            // define the sayHello function
+            function sayHello() {
+                alert(globalVar);
+            }
         }) ();
 
     </script>
