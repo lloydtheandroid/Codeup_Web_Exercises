@@ -2,7 +2,7 @@
 //  * Created by lloyd on 10/11/16.
 //  */
  "use strict"
-//
+
 // TODO 1. Write a JavaScript function that reverse a number. Go to the editor
 // Example x = 32243;
 // Expected Output : 34223
