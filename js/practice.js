@@ -34,16 +34,9 @@ console.log(reverse_a_number(32243));
 //     Click me to see the solution
 
 function palindrom(n) {
-    var output = n[n.length -i];
-    for(var i = 1; i < n.length; i++){
-        if(output == n[i]) {
-            console.log("var i is: " + i + ", and var n is  " + n);
-            return true;
-        }else {
-            console.log("var i is: " + i + ", and var n is " + n);
-            return false;
-        }
-    }
+    n = n + "";
+    var itIs = (n.split("").reverse().join("") == n);
+    return itIs;
 }
 
 console.log(palindrom("madam"));
@@ -53,6 +46,10 @@ console.log(palindrom("dog"));
 // TODO 3. Write a JavaScript function that generates all combinations of a string. Go to the editor
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
+
+function comboNations(n) {
+
+}
 
 
 // TODO 4. Write a JavaScript function that returns a passed string with letters in alphabetical order. Go to the editor
