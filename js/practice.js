@@ -6,7 +6,7 @@
 // TODO 1. Write a JavaScript function that reverse a number. Go to the editor
 // Example x = 32243;
 // Expected Output : 34223
-
+console.log("Write a JavaScript function that reverse a number. Go to the editor");
 //This is how i did it:
 var x = "123456";
 
@@ -18,7 +18,7 @@ function reverse(j) {
     }return output;
 
 }
-console.log(reverse(x));
+console.log("this is how i did it: " + reverse(x));
 
 
 //This is how ***http://www.w3resource.com*** did it:
@@ -27,26 +27,26 @@ function reverse_a_number(n)
     n = n + "";
     return n.split("").reverse().join("");
 }
-console.log(reverse_a_number(32243));
+console.log("this is how w3resource.com did it: " + reverse_a_number(32243));
 
 // TODO 2. Write a JavaScript function that checks whether a passed string is palindrome or not? Go to the editor
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 //     Click me to see the solution
-
-function palindrom(n) {
+console.log(" Write a JavaScript function that checks whether a passed string is palindrome or not");
+function isPalindrome(n) {
     n = n + "";
-    var itIs = (n.split("").reverse().join("") == n);
-    return itIs;
+    var checkForPalindrome = (n.split("").reverse().join("") == n);
+    return checkForPalindrome;
 }
 
-console.log(palindrom("madam"));
-console.log(palindrom("dog"));
+console.log("Is madam a palindrome? " + isPalindrome("madam"));
+console.log("Is dog a palindrome? " + isPalindrome("dog"));
 
 
 // TODO 3. Write a JavaScript function that generates all combinations of a string. Go to the editor
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
-
+console.log("Write a JavaScript function that generates all combinations of a string.")
 function comboNations(n) {
 
 }
@@ -56,26 +56,70 @@ function comboNations(n) {
 // Example string : 'webmaster'
 // Expected Output : 'abeemrstw'
 // Assume punctuation and numbers symbols are not included in the passed string.
+console.log("Write a JavaScript function that returns a passed string with letters in alphabetical order.");
+function sortString(n){
+    var NewArray = n.split("").sort().join("");
+    return NewArray;
+}
+console.log("Converting webmaster to: " + sortString("webmaster"));
 
-"webmaster".join
-
-// TODO 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. Go to the editor
+// TODO 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter
+// TODO  of each word of the string in upper case. Go to the editor
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
-
-
+console.log("Write a JavaScript function that accepts a string as a parameter and converts the first letter of " +
+    "each word of the string in upper case. Go to the editor");
+function upperFirst(n){
+    var NewUpper = n.charAt(0).toUpperCase() + n.substring(1);
+    return NewUpper;
+}
+console.log(upperFirst("hello"));
 
 // TODO 6. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. Go to the editor
 // Example string : 'Web Development Tutorial'
 // Expected Output : 'Development'
+console.log("Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.");
+function longestWordInString(words) {
+    var arrayOfWords = words.split(" ");
+    console.log(arrayOfWords);
+    arrayOfWords.forEach(function (element, index) {
+        var longestWord = "";
+        console.log(typeof element);
+        if (element[index].length > longestWord.length) {
+            longestWord = element[index];
+        } return longestWord;
+    })
+}
 
-
+console.log(longestWordInString("Web Development Tutorial"));
 
 // TODO 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string. Go to the editor
 // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
 //     Example string : 'The quick brown fox'
 // Expected Output : 5
 
+// function howManyVowels(string) {
+//     string.forEach(function (element) {
+//         var vowels = ["a", "e", "i", "o", "u"];
+//         var numberOfVowels = 0;
+//         if(element.charAt() = )
+//     })return numberOfVowels;
+//
+// }
+// console.log(howManyVowels("The quick brown fox"));
+
+// How w3resource.com did it:
+function vowel_count(str1) {
+    var vowel_list = 'aeiouAEIOU';
+    var vcount = 0;
+    for(var x = 0; x < str1.length ; x++) {
+        if (vowel_list.indexOf(str1[x]) !== -1) {
+            vcount += 1;
+        }
+    }
+    return vcount;
+}
+console.log(vowel_count("The quick brown fox"));
 
 
 // TODO 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not. Go to the editor
@@ -83,8 +127,26 @@ function comboNations(n) {
 
 
 
+function test_prime(n) {
+    if (n==1) {
+        return false;
+    } else if(n == 2) {
+        return true;
+    }else {
+        for(var x = 2; x < n; x++) {
+            if(n % x == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+console.log("Is 37 a prime number? " + test_prime(37));
+
 // TODO 9. Write a JavaScript function which accepts an argument and returns the type. Go to the editor
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+
 
 
 
@@ -95,6 +157,45 @@ function comboNations(n) {
 // TODO 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively. Go to the editor
 // Sample array : [1,2,3,4,5]
 // Expected Output : 2,4
+console.log( "11. Write a JavaScript function which will take an array of numbers stored " +
+    "and find the second lowest and second greatest numbers, respectively.");
+
+// var arrayOfNumbers = [1,2,3,4,5,6,7,8,9];
+// function secondLowSecondHigh(number){
+//     number.sort();
+//     number.forEach(function (element, index) {
+//         var secLowSecondHigh = [];
+//         secLowSecondHigh.push(element).splice(1, 1);
+//         secLowSecondHigh.push(element).splice((number.length()) -1, 1);
+//
+//         //colors.splice(colors.indexOf('green'), 1)
+//     });
+//     return secLowSecondHigh;
+// }
+// arrayOfNumbers.splice(1, 1);
+// console.log(secondLowSecondHigh(arrayOfNumbers));
+
+//How w3resource did it /answer :
+/**
+ * @return {string}
+ */
+function Second_Greatest_Lowest(arr_num)
+{
+    arr_num.sort(function(x,y)
+    {
+        return x-y; // <-- sorts arr_num lowest to highest, y-x would reverse it.
+    });
+    var uniqa = [arr_num[0]];
+    var result = [];
+    for(var j=1; j < arr_num.length; j++) {
+        if(arr_num[j-1] !== arr_num[j]) {
+            uniqa.push(arr_num[j]);}
+    }
+    result.push(uniqa[1],uniqa[uniqa.length-2]);
+    return result.join(',');
+}
+
+console.log(Second_Greatest_Lowest([1,2,3,4,5]));
 
 //
 // TODO 12. Write a JavaScript function which says whether a number is perfect. Go to the editor

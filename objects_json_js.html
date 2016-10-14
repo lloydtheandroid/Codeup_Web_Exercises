@@ -26,36 +26,36 @@
         // var books = [todo];
         var books = [
             {
-                "Title": "The Hobbit",
-                "Author": {
+                "title": "The Hobbit",
+                "author": {
                     "firstName": "J. R. R.",
                     "lastName": "Tolkien"
                 }
             },
             {
-                "Title": "The Alchemist",
-                "Author": {
+                "title": "The Alchemist",
+                "author": {
                     "firstName": "Paulo",
                     "lastName": "Coelho"
                 }
             },
             {
-                "Title": "To Kill a Mockingbird",
-                "Author": {
+                "title": "To Kill a Mockingbird",
+                "author": {
                     "firstName": "Harper",
                     "lastName": "Lee"
                 }
             },
             {
-                "Title": "The Seven Habits of Highly Effective People",
-                "Author": {
+                "title": "The Seven Habits of Highly Effective People",
+                "author": {
                     "firstName": "Stephen R.",
                     "lastName": "Covey"
                 }
             },
             {
-                "Title": "The Hard Thing About Hard Things",
-                "Author": {
+                "title": "The Hard Thing About Hard Things",
+                "author": {
                     "firstName": "Ben",
                     "lastName": "Horowitz"
                 }
@@ -70,24 +70,26 @@
         // start loop here
         books.forEach(function (book, index) {
             console.log("Book #" + (index + 1));
-            console.log("Title: " + book.Title);
-            console.log("Author: " + book.Author.firstName + " " + book.Author.lastName);
+            console.log("Title: " + book.title);
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName);
             console.log("---");
         });
         // end loop here
 
         books.push({
-            "Title": "Freakonomics",
-            "Author": {
+            "title": "Freakonomics",
+            "author": {
                 "firstName": "Steven D.",
                 "lastName": "Levitt,"}});
 
         books.forEach(function (book, index) {
             console.log("Book #" + (index + 1));
-            console.log("Title: " + book.Title);
-            console.log("Author: " + book.Author.firstName + " " + book.Author.lastName);
+            console.log("Title: " + book.title);
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName);
             console.log("---");
         });
+        console.log(books);
+
     </script>
 </body>
 </html>
