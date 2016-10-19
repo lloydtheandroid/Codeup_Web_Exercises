@@ -5,94 +5,191 @@
     <title>calculator</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
-        .btn-default {
-            width: 40px;
-            margin-right: 5px;
+        .calculator {
+            width: 300px;
+            padding: 0 5% 3% 5%;
+            border: solid black;
+            background-color: dimgray;
+
+        }
+        input {
+            font-family: "Courier New", Courier, monospace;
+            font-size: small;
         }
 
-        .display {
-            width: 60px;
-        }
-        /* Some hover effects */
-        .btn span:hover {
-            background: #9c89f6;
-            box-shadow: 0px 4px #6b54d3;
-            color: white;
+        div.col-xs-4, div.col-xs-3, div.col-xs-6 {
+            padding: 0;
         }
 
-        .btn span.eval:hover {
-            background: #abb850;
-            box-shadow: 0px 4px #717a33;
-            color: #ffffff;
+        button.btn {
+            width: 100%;
+            background-color: #d8d8d8;
+        }
+        button#clears {
+            background-color: red;
+        }
+        button.operator {
+            color: #FFF;
+            background-color: #f0ad4e;
+        }
+        input {
+            outline: none;
+            padding: 12px;
+            border-radius: 3px;
+            border: 1px solid black;
+            font-family: "Courier New", Courier, monospace;
+            font-size: small;
         }
 
-
-        /* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
-        .btn span:active {
-            box-shadow: 0px 0px #6b54d3;
-            top: 4px;
+        ::-webkit-input-placeholder { /* Chrome */
+            color: red;
+            transition: opacity 250ms ease-in-out;
         }
-
-        .btn span.eval:active {
-            box-shadow: 0px 0px #717a33;
-            top: 4px;
+        :focus::-webkit-input-placeholder {
+            opacity: 0.5;
         }
-
-        .btn span.clear:active {
-            top: 4px;
-            box-shadow: 0px 0px #d3545d;
+        :-ms-input-placeholder { /* IE 10+ */
+            color: red;
+            transition: opacity 250ms ease-in-out;
+        }
+        :focus:-ms-input-placeholder {
+            opacity: 0.5;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: red;
+            opacity: 1;
+            transition: opacity 250ms ease-in-out;
+        }
+        :focus::-moz-placeholder {
+            opacity: 0.5;
+        }
+        :-moz-placeholder { /* Firefox 4 - 18 */
+            color: red;
+            opacity: 1;
+            transition: opacity 250ms ease-in-out;
+        }
+        :focus:-moz-placeholder {
+            opacity: 0.5;
         }
 
     </style>
 </head>
 <body id="bootstrap-themes" class="bs-doc-home swag-line template-index">
     <nav>
-        <h1 class="main-header">My Awesome Calculator</h1>
+        <h1 class="main-header">Calculator</h1>
     </nav>
     <main class="container btn-group">
-        <!--// Calculator input display-->
-        <input id="displayLeft" type="text" value="0">
-        <input id="displayMiddle" type="text" value="">
-        <input id="displayRight" type="text" value="0">
+        <div class="container calculator">
+            <!--// Calculator input display-->
+            <p>L@ 90210</p>
+            <div class="row">
+                <div class="col-xs-4 display">
+                    <input type="text" class="form-control" placeholder="leftInput" id="displayLeft" >
+                </div>
+                <div class="col-xs-4 display">
+                    <input type="text" class="form-control" placeholder="operator" id="displayMiddle">
+                </div>
+                <div class="col-xs-4 display">
+                    <input type="text" class="form-control" placeholder="rightInput" id="displayRight">
+                </div>
+            </div>
 
-        <div class="numberPad col-md-2">
-            <button id="one">1</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="two">2</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="three">3</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="four">4</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="five">5</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="six">6</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="seven">7</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="eight">8</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="nine">9</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="zero">0</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="C">C</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="addition">+</button>
-        </div>
-        <div class="numberPad col-md-2">
-            <button id="evaluate">=</button>
+            <!-- Clear, pos/neg, percent, divide -->
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="clears">AC</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="posNeg">+/-</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="percent">%</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default operator" id="division">÷</button>
+                </div>
+            </div>
+
+            <!-- 7, 8, 9, multiply-->
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="seven">7</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="eight">8</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="nine">9</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default operator" id="multiplication">x</button>
+                </div>
+            </div>
+
+            <!-- 4, 5, 6 and minus -->
+            <div class="row">
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="four">4</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="five">5</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="six">6</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default operator" id="subtraction">-</button>
+                </div>
+
+            </div>
+
+            <!-- 1, 2, 3, and plus -->
+            <div class="row">
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="one">1</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="two">2</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="three">3</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default operator" id="addition">+</button>
+                </div>
+
+            </div>
+
+
+
+            <!-- Zero, decimal and equals -->
+            <div class="row">
+
+                <div class="col-xs-6">
+                    <button class="btn btn-default" id="zero">0</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default" id="decimal">.</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button class="btn btn-default operator" id="evaluate">=</button>
+                </div>
+
+            </div>
         </div>
 
     </main>

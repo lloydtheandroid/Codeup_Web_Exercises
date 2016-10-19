@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming books books</title>
+</head>
+<body>
+<h1>See your friend's books</h1>
+<!--<form>-->
+    <!--<label for="friend">Choose</label>-->
+    <!--<select id="friend" name="friend" class="friend">-->
+        <!--<option value="" disabled>Friend</option>-->
+        <!--<option value="Oliver">Oliver</option>-->
+        <!--<option value="Barry">Barry</option>-->
+        <!--<option value="Jessica">Jessica</option>-->
+        <!--<option value="Clark">Clark</option>-->
+    <!--</select>-->
+    <!--<input type="button" value="Search" id="search">-->
+<!--</form>-->
+<!--<div id="books"></div>-->
+<!--<script>-->
+    <!--var friends = [-->
+        <!--{name: 'Oliver', books: ['Ansible for DevOps', 'Servers for hackers']},-->
+        <!--{name: 'Barry', books: ['Working effectively with unit tests', '50 quick ideas for your tests']},-->
+        <!--{name: 'Jessica', books: ['Understanding the 4 rules of simple design', 'Principles of package design']},-->
+        <!--{name: 'Clark', books: ['Selling test driven projects']}-->
+    <!--];-->
+    <!--var friend = document.getElementsByClassName('friend');-->
+    <!--var options = document.getElementById('books');-->
+<!--//    friends.forEach(function (friend, i) {-->
+<!--//        options = '<option value="' + i + '">' + friend.name + '</option>';-->
+<!--//    });-->
+
+    <!--var btn2 = document.getElementById('search');-->
+    <!--btn2.addEventListener('click', remover, false);-->
+
+    <!--var displayBooks = options.innerHTML +-->
+    <!---->
+
+    <!--friends.forEach(function (friend, index) {-->
+        <!--console.log(friend.name + " books are: " + friend.books);-->
+        <!--console.log("-&#45;&#45;");-->
+    <!--});-->
+    <!--console.log(books);-->
+
+
+
+<!--</script>-->
+<!--Luis's Solution-->
+<form>
+    <label for="friend">Choose</label>
+    <select id="friend" name="friend" class="friend">
+        <option value="">Friend</option>
+    </select>
+    <input type="button" value="Search">
+</form>
+<div id="books"></div>
+<script>
+    var friends = [
+        {name: 'Oliver', books: ['Ansible for DevOps', 'Servers for hackers']},
+        {name: 'Barry', books: ['Working effectively with unit tests', '50 quick ideas for your tests']},
+        {name: 'Jessica', books: ['Understanding the 4 rules of simple design', 'Principles of package design']},
+        {name: 'Clark', books: ['Selling test driven projects']}
+    ];
+    var friend = document.getElementById('friend');
+    var options = "";
+    friends.forEach(function (friend, i) {
+        options += '<option value="' + i + '">' + friend.name + '</option>';
+    });
+    friend.innerHTML = options;
+</script>
+</body>
+</html>
