@@ -10,8 +10,9 @@
             width: 300px;
             margin: 0 2% 0 2%;
             padding: 0 5% 3% 5%;
+            border-left: thin solid whitesmoke;
             border-right: solid dimgray;
-            border-right: solid dimgray;
+            border-bottom:thin solid dimgray;
             border-radius: 3%;
             background: lightcyan; /* For browsers that do not support gradients */
             background: linear-gradient(125deg, lightcyan , dimgray); /* Standard syntax */
@@ -24,22 +25,27 @@
             color: #FFF;
             font-family: monospace;
             font-size: small;
-            background-color: green;
+            background: linear-gradient(0deg, darkgreen , green);
         }
 
         input#displayLeft {
             border-radius: 10% 0 0 10%;
             border-right: 0;
+            border-left: solid thin darkgreen;
+            border-top: solid darkgreen;
         }
         input#displayMiddle {
             border-radius: 0;
             border-left: 0;
             border-right: 0;
+            border-top: solid darkgreen;
             padding:0;
         }
         input#displayRight {
             border-radius: 0 10% 10% 0;
             border-left: 0;
+            border-top: solid darkgreen;
+
 
         }
 
@@ -59,7 +65,10 @@
             width: 100%;
             border-radius: 0;
             background: linear-gradient(125deg, #d8d8d8 , dimgray); /* Standard syntax */
-            border: thin solid dimgray;
+            border-top: thin solid dimgray;
+            border-right: thin solid dimgray;
+            border-bottom: thin solid whitesmoke;
+            border-left: thin solid whitesmoke;
         }
 
         button.btn:hover {
@@ -68,7 +77,10 @@
 
         button#clears {
             background: linear-gradient(125deg, red , lightcoral); /* Standard syntax */
-            border: thin solid darkred;
+            border-top: thin solid darkred;
+            border-right: thin solid darkred;
+            border-bottom: thin solid whitesmoke;
+            border-left: thin solid whitesmoke;
             border-radius: 10% 0 0 0;
         }
 
@@ -92,7 +104,10 @@
         button.operator {
             color: #FFF;
             background: linear-gradient(125deg, orange , peachpuff); /* Standard syntax */
-            border: thin solid saddlebrown;
+            border-top: thin solid saddlebrown;
+            border-right: thin solid saddlebrown;
+            border-bottom: thin solid whitesmoke;
+            border-left: thin solid whitesmoke;
         }
         button.operator:hover {
             color: #000;
@@ -256,7 +271,7 @@
                 </div>
 
                 <div class="col-xs-3">
-                    <button class="btn btn-default operator" id="evaluate">=</button>
+                    <button class="btn btn-default" id="evaluate">=</button>
                 </div>
 
             </div>
