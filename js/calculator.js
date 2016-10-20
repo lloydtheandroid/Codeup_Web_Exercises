@@ -9,12 +9,23 @@
     var righty = document.getElementById("displayRight");
     var operator = ["+", "-", "*", "/"];
 
+    var clear = document.getElementById('clears')
+    .addEventListener('click', function () {
+        lefty.value = ("");
+        middle.value = ("");
+        righty.value = ("");
+    });
+
+
+
     document.getElementById('one')
         .addEventListener('click', function() {
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -26,7 +37,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -38,7 +51,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -50,7 +65,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -62,7 +79,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -73,7 +92,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -85,7 +106,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -97,7 +120,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -109,7 +134,9 @@
             if (middle.value == "") {
                 lefty.value = (lefty.value + this.innerHTML)
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
                 righty.value = (righty.value + this.innerHTML)
@@ -119,29 +146,36 @@
     document.getElementById('zero')
         .addEventListener('click', function() {
             if (middle.value == "") {
-                lefty.value = (lefty.value + this.innerHTML)
+                if(lefty.value.charAt(0) != "0") {
+                    lefty.value = (lefty.value + this.innerHTML)
+                }else if (lefty.value.charAt(0) == "0" && lefty.value.charAt(1) > "0") {
+                    lefty.value = (lefty.value + this.innerHTML)
+                }
             } else if(middle.value == "="){
-                Clear;
+                lefty.value = ("");
+                middle.value = ("");
+                righty.value = ("");
                 lefty.value = (lefty.value + this.innerHTML)
             }else {
-                righty.value = (righty.value + this.innerHTML)
+                if(righty.value.charAt(0) != "0") {
+                    righty.value = (righty.value + this.innerHTML)
+                }else if (righty.value.charAt(0) == "0" && righty.value.charAt(1) > "0") {
+                    righty.value = (righty.value + this.innerHTML)
+                }
             }
         });
 
     document.getElementById('decimal')
         .addEventListener('click', function() {
-                if (middle.value == "" && lefty.value) {
-                    lefty.value = (lefty.value + this.innerHTML)
-                } else {
-                    righty.value = (righty.value + this.innerHTML)
+            if (middle.value == "") {
+                if(lefty.value % 1 == 0) {
+                    lefty.value = (lefty.value + this.innerHTML);
                 }
-            });
-
-    var clear = document.getElementById('clears')
-        .addEventListener('click', function () {
-            lefty.value = ("");
-            middle.value = ("");
-            righty.value = ("");
+            } else {
+                if(righty.value % 1 == 0) {
+                    righty.value = (righty.value + this.innerHTML);
+                }
+            }
         });
 
     var adds = document.getElementById("addition")
@@ -185,6 +219,22 @@
             if(lefty.value != "" && righty.value != "" && middle.value != "") {
                 lefty.value = RV / LV;
                 righty.value = "";
+            }
+        });
+    var posOrNeg = document.getElementById("posNeg")
+        .addEventListener('click', function () {
+            if (middle.value == "") {
+                if(Math.abs(lefty.value) == lefty.value){
+                    lefty.value = -Math.abs(lefty.value)
+                }else {
+                    lefty.value = Math.abs(lefty.value)
+                }
+            }else {
+                if (Math.abs(righty.value) == righty.value) {
+                    righty.value = -Math.abs(righty.value)
+                } else {
+                    righty.value = Math.abs(righty.value)
+                }
             }
         });
 

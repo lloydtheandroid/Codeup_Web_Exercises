@@ -5,99 +5,165 @@
     <title>calculator</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
+
         .calculator {
             width: 300px;
+            margin: 0 2% 0 2%;
             padding: 0 5% 3% 5%;
-            border: solid black;
-            background-color: dimgray;
-
+            border: solid dimgray;
+            border-radius: 3%;
+            background: lightcyan; /* For browsers that do not support gradients */
+            background: linear-gradient(125deg, lightcyan , dimgray); /* Standard syntax */
         }
-        input {
-            font-family: "Courier New", Courier, monospace;
+        .schwifty {
+            color: #bae9fe;
+            text-shadow: 1px 1px 2px black;
+        }
+        input.form-control {
+            color: #FFF;
+            font-family: monospace;
             font-size: small;
+            background-color: green;
         }
 
-        div.col-xs-4, div.col-xs-3, div.col-xs-6 {
+        input#displayLeft {
+            border-radius: 10% 0 0 10%;
+            border-right: 0;
+        }
+        input#displayMiddle {
+            border-radius: 0;
+            border-left: 0;
+            border-right: 0;
+            padding:0;
+        }
+        input#displayRight {
+            border-radius: 0 10% 10% 0;
+            border-left: 0;
+
+        }
+
+        div.col-xs-4, div.col-xs-3, div.col-xs-6, div.col-xs-5, div.col-xs-2 {
             padding: 0;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: xx-small;
+        }
+
+        input:-ms-input-placeholder {
+            color: red;
         }
 
         button.btn {
             width: 100%;
-            background-color: #d8d8d8;
+            border-radius: 0;
+            background: linear-gradient(125deg, #d8d8d8 , dimgray); /* Standard syntax */
+            border: thin solid dimgray;
         }
+
+        button.btn:hover {
+            color: lime;
+        }
+
         button#clears {
-            background-color: red;
+            background: linear-gradient(125deg, red , lightcoral); /* Standard syntax */
+            border: thin solid darkred;
+            border-radius: 10% 0 0 0;
         }
+
+        button#evaluate {
+            border-radius: 0 0 10% 0;
+        }
+
+        button#zero {
+            border-radius: 0 0 0 5%;
+        }
+
+        button#division {
+            border-radius: 0 10% 0 0;
+        }
+
+        button#clears:hover {
+            color: yellow;
+        }
+
+
         button.operator {
             color: #FFF;
-            background-color: #f0ad4e;
+            background: linear-gradient(125deg, orange , peachpuff); /* Standard syntax */
+            border: thin solid saddlebrown;
         }
+        button.operator:hover {
+            color: #000;
+        }
+
         input {
             outline: none;
             padding: 12px;
             border-radius: 3px;
             border: 1px solid black;
             font-family: "Courier New", Courier, monospace;
-            font-size: small;
+            font-size: x-small;
         }
 
-        ::-webkit-input-placeholder { /* Chrome */
-            color: red;
-            transition: opacity 250ms ease-in-out;
+        .showme{
+            display: none;
         }
-        :focus::-webkit-input-placeholder {
-            opacity: 0.5;
+        .showhim:hover .showme{
+            display : block;
         }
-        :-ms-input-placeholder { /* IE 10+ */
-            color: red;
-            transition: opacity 250ms ease-in-out;
+        .showhim:hover .ok{
+            display : none;
         }
-        :focus:-ms-input-placeholder {
-            opacity: 0.5;
-        }
-        ::-moz-placeholder { /* Firefox 19+ */
-            color: red;
-            opacity: 1;
-            transition: opacity 250ms ease-in-out;
-        }
-        :focus::-moz-placeholder {
-            opacity: 0.5;
-        }
-        :-moz-placeholder { /* Firefox 4 - 18 */
-            color: red;
-            opacity: 1;
-            transition: opacity 250ms ease-in-out;
-        }
-        :focus:-moz-placeholder {
-            opacity: 0.5;
+
+
+       .imgLeft {
+            position: relative;
+            top: 15px;
+            display: block;
         }
 
     </style>
 </head>
 <body id="bootstrap-themes" class="bs-doc-home swag-line template-index">
     <nav>
-        <h1 class="main-header">Calculator</h1>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-5"><h1 class="main-header schwifty"><small>Schwifty Calculator</small></h1></div>
+            <div class="col-xs-4"></div>
+        </div>
     </nav>
+
+    <div class="hidden">
+        <audio id="audio1" src="sounds/quickFart.wav"></audio>
+        <audio id="audio2" src="sounds/RaspberryFart.wav"></audio>
+    </div>
+
     <main class="container btn-group">
-        <div class="container calculator">
+        <div class="col-xs-2 showhim">
+            <div class="showme"><h6>Get Schwifty in here!</h6><a><img src="img/SaYmoW6.gif" class="img-responsive"></a></div>
+            <div class="ok"><a><img src="img/rickTwerk.gif" class="img-responsive img-circle imgLeft"><h6>Get Schwifty!</h6></a></div>
+
+        </div>
+        <div class="container calculator col-xs-8">
             <!--// Calculator input display-->
-            <p>L@ 90210</p>
+            <p class="schwifty">::The Rick'N'ator 2000::</p>
             <div class="row">
-                <div class="col-xs-4 display">
-                    <input type="text" class="form-control" placeholder="leftInput" id="displayLeft" >
+                <div class="col-xs-5 display">
+                    <input type="text" class="form-control" placeholder="What's " id="displayLeft" >
                 </div>
-                <div class="col-xs-4 display">
-                    <input type="text" class="form-control" placeholder="operator" id="displayMiddle">
+                <div class="col-xs-2 display">
+                    <input type="text" class="form-control" placeholder="my" id="displayMiddle">
                 </div>
-                <div class="col-xs-4 display">
-                    <input type="text" class="form-control" placeholder="rightInput" id="displayRight">
+                <div class="col-xs-5 display">
+                    <input type="text" class="form-control" placeholder="Purpose?" id="displayRight">
                 </div>
             </div>
 
             <!-- Clear, pos/neg, percent, divide -->
             <div class="row">
                 <div class="col-xs-3">
-                    <button class="btn btn-default" id="clears">AC</button>
+                    <button class="btn btn-default" id="clears" onclick="play()" value="PLAY">AC</button>
                 </div>
 
                 <div class="col-xs-3">
@@ -191,13 +257,16 @@
 
             </div>
         </div>
-
     </main>
     <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-    <script src="js/calculator.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/calculator.js"></script>
     <script>
-
+        function play(){
+            var audio = document.getElementById("audio1");
+            audio.play();
+        }
     </script>
+
 </body>
 </html>
