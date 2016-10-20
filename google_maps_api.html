@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+    <style type="text/css">
+        #map-canvas {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMd0fAqI9mzTm-gIa32ImVrCR2zSDVBak"></script>
+    <script type="text/javascript">
+        (function() {
+            "use strict";
+
+            // Set our map options
+            var mapOptions = {
+                // Set the zoom level
+                zoom: 15
+            };
+
+            // Render the map
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+            var address = "Embassy Oaks Shopping Center, 606 Embassy Oaks #100, San Antonio, TX 78216";
+
+            // Init geocoder object
+            var geocoder = new google.maps.Geocoder();
+
+            var mPh = { lat: 29.5636896, lng: -98.4897047};
+
+            // Add the marker to our existing map
+            var marker = new google.maps.Marker({
+                position: mPh,
+                map: map
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "Magnolio Pancake Haus"
+            });
+
+            // Open the window using our map and marker
+            infowindow.open(map, marker);
+
+            // Geocode our address
+            geocoder.geocode({"address": address}, function (results, status) {
+
+                // Check for a successful result
+                if (status == google.maps.GeocoderStatus.OK) {
+                    // Recenter the map over the address
+                    map.setCenter(results[0].geometry.location);
+                } else {
+                    // Show an error message with the status if our request fails
+                    alert("Geocoding was not successful - STATUS: " + status);
+                }
+            });
+        })();
+    </script>
+</html>

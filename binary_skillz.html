@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Skills</title>
+</head>
+<body>
+<script>
+
+//    var stringOfDigits = prompt("Enter you binary", "");
+//
+//
+//    // turn string into array
+//    var binaryDigits = stringOfDigits.split("");
+//
+//    // reverse the array so that right to left is 1,2,4,8,16,32 etc....
+//    binaryDigits.reverse();
+//
+//    stop = 0;
+//
+//     function convertToDecimal(array) {
+//         array.forEach(function (digit, index) {
+//             if (digit == 1) {
+//                 if (index = 0) {
+//                     stop = 1;
+//                     console.log(index, stop);
+//                 } else if (index = 1) {
+//                     stop = 2;
+//                     console.log(index, stop);
+//                 } else if (index = 2) {
+//                     stop = 4;
+//                     console.log(index, stop);
+//                 } else if (index = 2) {
+//                     stop = 8;
+//                     console.log(index, stop);
+//                 }
+//             }
+//         })
+//     }
+//
+//    convertToDecimal(binaryDigits)
+//
+//
+//    Math.pow(2, 4)
+
+    function convertBinaryToDecimal(binary) {
+        var i;
+        var decimal = 0;
+
+        for (i = 0; i < binary.length; i++) {
+            decimal += binary[i] * Math.pow(2, binary.length - i - 1);
+        }
+        return decimal;
+    }
+    var binaryDigits = prompt("enter your binary digits: ", "");
+    alert("Your binary number: " + binaryDigits + " converted to decimal is " + convertBinaryToDecimal(binaryDigits));
+
+</script>
+</body>
+</html>
