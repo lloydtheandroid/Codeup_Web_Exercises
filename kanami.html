@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .konami {
+            background-color: yellow;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<div class="container">
+    <div class="col-xs-4 hidden"><img src="img/SaYmoW6.gif" class="img-responsive"></div>
+    <div class="col-xs-4 hidden">
+        <h1>Time to get schwifty!</h1>
+        <img src="img/SaYmoW6.gif" class="img-responsive">
+    </div>
+    <div class="col-xs-4 hidden"><img src="img/SaYmoW6.gif" class="img-responsive"></div>
+</div>
+
+<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65,13";
+
+    $(document).keydown(function(e) {
+
+        kkeys.push( e.keyCode );
+
+        if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+            // do something awesome
+            $("body").addClass("konami");
+            $("div").removeClass("hidden");
+        }
+    });
+</script>
+</body>
+</html>
