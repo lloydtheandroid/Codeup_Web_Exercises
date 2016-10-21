@@ -45,25 +45,17 @@
 </div>
 <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
 <script>
-    $( ":header" ).css({ background: "#ccc", color: "blue" });
-    $( ".elements" ).css( "border", "3px solid red", "font-family" );
-    $( ".List" ).css( "border", "5px solid purple" );
-    $("h2").css({color: "orange"});
-    $("#firstParagraph").css({color: "lime"});
-    $("div").css({
-        background: "#f0F",
-        color: "yellow"
+    $("h1").click(function() {
+        $(this).css('background-color', "yellow")
     });
+    $("p").dblclick(function() {
+        $(this).css('font-size', "18px")
+    });
+    $("li").hover(function() {
+        $(this).css('color', "red")}, function() {
+            $(this).css('color', "black")
+    })
 
-    $( "#clickme" ).click(function() {
-        $( "#myLists" ).animate({
-            opacity: 0.25,
-            left: "+=50",
-            height: "toggle"
-        }, 5000, function() {
-            // Animation complete.
-        });
-    });
 </script>
 </body>
 </html>
