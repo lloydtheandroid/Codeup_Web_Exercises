@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery Exercises</title>
+</head>
+<body>
+<h1 id="head">This is an h1</h1>
+<h2 id="head">This is an h2</h2>
+<p id="firstParagraph">
+    The path of the righteous man is beset on all sides by the iniquities of the
+    selfish and the tyranny of evil men. Blessed is he who, in the name of charity
+    and good will, shepherds the weak through the valley of darkness, for he is truly
+    his brother's keeper and the finder of lost children. And I will strike down upon
+    thee with great vengeance and furious anger those who would attempt to poison and
+    destroy My brothers. And you will know My name is the Lord when I lay My vengeance
+    upon thee.
+</p>
+<div id="clickme">
+    Click here
+
+    <div id="myLists">
+        <ul class="List">
+            <li class="elements">First list item</li>
+            <li class="elements">Second list item</li>
+            <li class="elements">Third list item</li>
+            <li class="elements">Fourth list item</li>
+            <li class="elements">Fifth list item</li>
+        </ul>
+        <ul class="List">
+            <li class="elements">First list item</li>
+            <li class="elements">Second list item</li>
+            <li class="elements">Third list item</li>
+            <li class="elements">Fourth list item</li>
+            <li class="elements">Fifth list item</li>
+        </ul>
+        <ul class="List">
+            <li class="elements">First list item</li>
+            <li class="elements">Second list item</li>
+            <li class="elements">Third list item</li>
+            <li class="elements">Fourth list item</li>
+            <li class="elements">Fifth list item</li>
+        </ul>
+    </div>
+</div>
+<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<script>
+    $( ":header" ).css({ background: "#ccc", color: "blue" });
+    $( ".elements" ).css( "border", "3px solid red", "font-family" );
+    $( ".List" ).css( "border", "5px solid purple" );
+    $("h2").css({color: "orange"});
+    $("#firstParagraph").css({color: "lime"});
+    $("div").css({
+        background: "#f0F",
+        color: "yellow"
+    });
+
+    $( "#clickme" ).click(function() {
+        $( "#myLists" ).animate({
+            opacity: 0.25,
+            left: "+=50",
+            height: "toggle"
+        }, 5000, function() {
+            // Animation complete.
+        });
+    });
+</script>
+</body>
+</html>

@@ -24,7 +24,7 @@
             // Set our map options
             var mapOptions = {
                 // Set the zoom level
-                zoom: 15
+                zoom: 13
             };
 
             // Render the map
@@ -44,7 +44,8 @@
             });
 
             var infowindow = new google.maps.InfoWindow({
-                content: "Magnolio Pancake Haus"
+                content: "<a href=''>Magnolia Pancake Haus</a>",
+                disableAutoPan: false
             });
 
             // Open the window using our map and marker
@@ -64,4 +65,5 @@
             });
         })();
     </script>
+</body>
 </html>
