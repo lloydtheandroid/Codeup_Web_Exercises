@@ -49,7 +49,7 @@
 <script>
     "use strict";
 
-    //Hide -toggle effect
+    //TODO Hide -toggle effect
 //    $('#cityParkToggle').click(function () {
 //        $('#cityPark').toggle("slow", function () {
 //            // Animation complete.
@@ -67,19 +67,32 @@
 //            // Animation complete.
 //        });
 //    });
-    //Fade toggle effect
-
+    //TODO Fade toggle effect
+//
+//    $('#cityParkToggle').click(function () {
+//        $('#cityPark').fadeToggle( "slow", "linear" )
+//    });
+//
+//    $('#stateParkToggle').click(function () {
+//        $('#statePark').fadeToggle( "slow", "linear" )
+//    });
+//
+//    $('#nationalParkToggle').click(function () {
+//        $('#nationalPark').fadeToggle( "slow", "linear" )
+//    });
+    //TODO Slide toggle effect
     $('#cityParkToggle').click(function () {
-        $('#cityPark').fadeToggle( "slow", "linear" )
-    });
+            $('#cityPark').slideToggle( "slow", "linear" )
+        });
 
-    $('#stateParkToggle').click(function () {
-        $('#statePark').fadeToggle( "slow", "linear" )
-    });
+        $('#stateParkToggle').click(function () {
+            $('#statePark').slideToggle( "slow", "linear" )
+        });
 
-    $('#nationalParkToggle').click(function () {
-        $('#nationalPark').fadeToggle( "slow", "linear" )
-    });
+        $('#nationalParkToggle').click(function () {
+            $('#nationalPark').slideToggle( "slow", "linear" )
+        });
+
 
 </script>
 </body>
