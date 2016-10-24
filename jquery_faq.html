@@ -48,22 +48,37 @@
 <script src="js/bootstrap.js"></script>
 <script>
     "use strict";
+
+    //Hide -toggle effect
+//    $('#cityParkToggle').click(function () {
+//        $('#cityPark').toggle("slow", function () {
+//            // Animation complete.
+//        });
+//    });
+//
+//    $('#stateParkToggle').click(function () {
+//        $('#statePark').toggle( "slow", function() {
+//            // Animation complete.
+//        });
+//    });
+//
+//    $('#nationalParkToggle').click(function () {
+//        $('#nationalPark').toggle( "slow", function() {
+//            // Animation complete.
+//        });
+//    });
+    //Fade toggle effect
+
     $('#cityParkToggle').click(function () {
-        $('#cityPark').toggle("slow", function () {
-            // Animation complete.
-        });
+        $('#cityPark').fadeToggle( "slow", "linear" )
     });
 
     $('#stateParkToggle').click(function () {
-        $('#statePark').toggle( "slow", function() {
-            // Animation complete.
-        });
+        $('#statePark').fadeToggle( "slow", "linear" )
     });
 
     $('#nationalParkToggle').click(function () {
-        $('#nationalPark').toggle( "slow", function() {
-            // Animation complete.
-        });
+        $('#nationalPark').fadeToggle( "slow", "linear" )
     });
 
 </script>
