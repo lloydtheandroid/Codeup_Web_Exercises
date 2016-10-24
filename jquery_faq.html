@@ -14,9 +14,9 @@
     <h1>List of a Few National Parks</h1>
 
     <div>
-        <h3>National Parks</h3>
+        <h3 id="nationalParkToggle">National Parks</h3>
 
-        <ul>
+        <ul id="nationalPark">
             <li>Fact One</li>
             <li>Fact two</li>
             <li>Fact Three</li>
@@ -24,8 +24,8 @@
         </ul>
     </div>
     <div>
-        <h3>State Parks</h3>
-        <ul>
+        <h3 id="stateParkToggle">State Parks</h3>
+        <ul id="statePark">
             <li>Fact One</li>
             <li>Fact two</li>
             <li>Fact Three</li>
@@ -34,8 +34,8 @@
     </div>
 
     <div>
-        <h3>City Parks</h3>
-       <ul>
+        <h3 id="cityParkToggle">City Parks</h3>
+       <ul id="cityPark">
             <li>Fact One</li>
             <li>Fact two</li>
             <li>Fact Three</li>
@@ -48,31 +48,23 @@
 <script src="js/bootstrap.js"></script>
 <script>
     "use strict";
-
-//    $("li:first-child").css("font-weight", "bold");
-
-    //isnotafunction means this is not a Jquery object
-
-
-//    $("h3").on("click", function () {
-//        console.log($().next());
-//        $(this).parent().next().next().toggleClass("hidden");
-//    });
-
-    //How Ryan did it:
-    $("ul").each(function (index, element) {
-        var $element = $(element);
-        $element.children().first().css("font-weight", "bold")
+    $('#cityParkToggle').click(function () {
+        $('#cityPark').toggle("slow", function () {
+            // Animation complete.
+        });
     });
 
-    //can also use $(this).children().first().css("font-weight", "bold");
+    $('#stateParkToggle').click(function () {
+        $('#statePark').toggle( "slow", function() {
+            // Animation complete.
+        });
+    });
 
-
-    $("div").click(function () {
-        $(this).children().children().toggleClass("hidden")
-    })
-
-
+    $('#nationalParkToggle').click(function () {
+        $('#nationalPark').toggle( "slow", function() {
+            // Animation complete.
+        });
+    });
 
 </script>
 </body>
