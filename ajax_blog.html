@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <div id="posts" class="col-xs-8 col-md-6 col-xs-offset-2"></div>
+    </div>
+    <!--<div class="col"></div>-->
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+    function postToBlog(posts) {
+        console.log(posts);
+        posts.forEach(function (post) {
+            $("#posts").append("<h3>" + post.title + "</h3>" + "<p>" + post.content + "</p>")
+        })
+    }
+
+    var getBlogPost = $.get("data/blog.json");
+
+    getBlogPost.always(function (response) {
+                    console.log(response)
+                }).fail(function (error) {
+            console.log(error);
+        }).done(function (response) {
+            console.log(response);
+            postToBlog(response);
+        });
+</script>
+
+</body>
+</html>
