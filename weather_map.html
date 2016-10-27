@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+<body>
+<main>
+    <h1>San Antonio Weather</h1>
+    <div id="results"></div>
+</main>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+        $.ajax({
+            type: "GET",
+            dataType: "jsonp",
+            jsonp: "callback", jsonpCallback: "callback",
+            url: "http://dataservice.accuweather.com/forecasts/v1/daily/5day/351198.json?apikey=4zEGGRGSEecaQZl4K1To6RhV1B9Hm9Wt",
+            cache: false
+                }).always(function (response) {
+            console.log(response)
+        }).fail(function (error) {
+            console.log(error);
+        }).done(function (response) {
+            console.log(typeof(response));
+            $(response).each(function (i, element){
+                console.log(element);
+                console.log(i);
+//                $("#results").html("";)
+                $("#results").append("<tr><td>" + element.DailyForecasts[i].Date +
+                        "</td><td>" + element.DailyForecasts[i].Day.IconPhrase + "</td></tr>")
+            })
+        })
+
+    })
+</script>
+</body>
+</html>
