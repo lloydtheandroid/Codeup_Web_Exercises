@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.getJSON demo</title>
+    <style>
+        img {
+            height: 100px;
+            float: left;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<div id="images"></div>
+
+<script>
+    (function() {
+        var githubAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        $.getJSON( githubAPI, {
+            "owner_url": "https://api.github.com/repos/api-playground/projects-test",
+            "url": "https://api.github.com/projects/1002604",
+            "id": 1002604,
+            "name": "Projects Documentation",
+            "body": "Developer documentation project for the developer site.",
+            "number": 1,
+            "creator": {
+                "login": "octocat",
+                "id": 1,
+                "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/octocat",
+                "html_url": "https://github.com/octocat",
+                "followers_url": "https://api.github.com/users/octocat/followers",
+                "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+                "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+                "organizations_url": "https://api.github.com/users/octocat/orgs",
+                "repos_url": "https://api.github.com/users/octocat/repos",
+                "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/octocat/received_events",
+                "type": "User",
+                "site_admin": false
+            })
+            .done(function( data ) {
+                $.each( data.items, function( i, item ) {
+                    $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+                    if ( i === 3 ) {
+                        return false;
+                    }
+                });
+            });
+    })();
+</script>
+
+</body>
+</html>
